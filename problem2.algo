@@ -17,16 +17,11 @@ END
 PROCEDURE  calculer(n:INTEGER ,t:ARRAY_OF INTEGER,t1:ARRAY_OF INTEGER  )
 VAR
    i:INTEGER;
-   j:INTEGER ;
    sum ; INTEGER;
 BEGIN
     sum:=0;
-    j:=0;
     FOR i FROM 0 TO n-1 STEP 1  DO
-        WHILE (j<=n) DO
-            sum= sum+(t[i]*t1[j])
-        END_WHILE
-    j=j+1
+         sum= sum+(t[i]*t1[i])
     END_FOR
     write(sum)
 END
