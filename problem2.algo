@@ -23,7 +23,11 @@ BEGIN
     FOR i FROM 0 TO n-1 STEP 1  DO
          sum= sum+(t[i]*t1[i])
     END_FOR
-    write(sum)
+    IF (sum=0) THEN
+        write("les deux vecture sont orthogonal ")
+        ELSE
+            write("les deux vecture ne sont pas orthogonal ")
+    END_IF
 END
 ALGORITHM algorithm_name
 VAR
