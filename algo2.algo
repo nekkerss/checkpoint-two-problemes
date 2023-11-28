@@ -1,0 +1,39 @@
+ALGORITHM algorithm_name
+VAR
+    tab :  ARRAY_OF INTEGER[3];
+    tab1 : ARRAY_OF INTEGER[4];
+    i :INTEGER;
+    j:INTEGER;
+    ok :BOOLEAN;
+    sum : INTEGER :=0 ;
+    sum1 : INTEGER :=0 ;
+    sum2 : INTEGER :=0 ;
+BEGIN
+    tab :={3,1,7,9};
+    tab1 :={2, 4, 1, 9, 3};
+    ok:=false;
+    FOR i FROM 0 TO tab.length-1 STEP 1  DO
+            FOR j FROM 0 TO tab1.length STEP 1 DO
+                if (tab[i]=tab1[j]) THEN
+                    ok := true;
+                END_IF
+            END_FOR
+            if(ok=false) THEN
+                sum1 := sum1 +tab[i]
+            END_IF
+    END_FOR
+    FOR j FROM 0 TO tab1.length-1 STEP 1  DO
+        FOR i FROM 0 TO tab.length STEP 1 DO
+            if (tab[j]=tab1[i]) THEN
+                ok := true;
+            END_IF
+        END_FOR
+        if (ok=fasle) THEN
+            sum2 := sum2 +tab[j];
+        END_IF
+    END_FOR
+    sum := sum1 + sum2 
+    write(sum)
+    
+
+END

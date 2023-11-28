@@ -1,0 +1,44 @@
+PROCEDURE remplir1( var t:ARRAY_OF INTEGER, n :INTEGER)
+VAR
+    i :INTEGER;
+BEGIN
+   FOR i FROM 0 TO n-1 STEP step  DO
+    read(t[i]);
+   END_FOR
+END
+PROCEDURE remplir( var t1:ARRAY_OF INTEGER, n :INTEGER)
+VAR
+    i :INTEGER
+BEGIN
+   FOR i FROM 0 TO n-1 STEP step  DO
+    read(t1[i]);
+   END_FOR
+END
+PROCEDURE  calculer(n:INTEGER ,t:ARRAY_OF INTEGER,t1:ARRAY_OF INTEGER  )
+VAR
+   i:INTEGER;
+   j:INTEGER ;
+   sum ; INTEGER;
+BEGIN
+    sum:=0;
+    j:=0;
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        WHILE (j<=n) DO
+            sum= sum+(t[i]*t1[j])
+        END_WHILE
+    j=j+1
+    END_FOR
+    write(sum)
+END
+ALGORITHM algorithm_name
+VAR
+    t : ARRAY_OF INTEGER[50];
+    t1 : ARRAY_OF INTEGER[50];
+    n :INTEGER;
+
+BEGIN
+    read(n)
+    remplir1( t)
+    remplir2( t1)
+    calculer(n:INTEGER ,t:ARRAY_OF INTEGER,t1:ARRAY_OF INTEGER  )
+END
