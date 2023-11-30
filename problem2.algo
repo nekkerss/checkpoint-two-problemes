@@ -39,5 +39,5 @@ BEGIN
     read(n)
     remplir1( t)
     remplir2( t1)
-    calculer(n:INTEGER ,t:ARRAY_OF INTEGER,t1:ARRAY_OF INTEGER  )
+    calculer(n,t,t1  )
 END
